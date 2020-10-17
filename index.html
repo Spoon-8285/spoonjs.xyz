@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="harrnish" />
+
+    <title>Y8 | Nick</title>
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="https://cdn.glitch.com/c54bdb2e-490c-4a16-bad1-0c7bb06dcc62%2Ffavicon.ico?v=1581718342615"
+    />
+    <!-- bootstrap cdns -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- terminal effect -->
+    <script src="t.min.js"></script>
+
+    <!-- for on scroll animations -->
+    <link rel="stylesheet" href="animate.css" />
+    <script src="wow.min.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!--------------- navbar starts here --------------->
+      <nav>
+        <span id="brand">
+        <a href="@">Spoon_JS</a>
+        </span>
+      </nav>
+      <!--------------- navbar ends here --------------->
+
+      <!--------------- hero section starts here --------------->
+      <div class="hero">
+        <div class="header">
+          <h1 class="line anim-typewriter" style="color: #3f3f74;">Spoon.JS</h1>
+        </div>
+      </div>
+      <br />
+      <div class="scroll-down"></div>
+      <!--------------- hero section ends here --------------->
+
+      <!--------------- projects section starts here --------------->
+
+      <br /><br /><br />
+
+      <h6>Who is?</h6>
+      <!--------------- projects section ends here --------------->
+
+      <!--------------- footer starts here --------------->
+      <div class="footer">
+        <div class="container">
+          <div class="withs">
+            <p>
+              I am a developer, i do alot of stuff like discord bots, web design, 3d modeling and gaames.
+            </p>
+
+            <div class="col-lg-4" id="personal">
+              <p class="wow fadeInUp">- Spoon</p>
+            </div>
+          </div>
+          <br /><br />
+          <div class="collab">
+            <div class="row">
+              <div class="col-lg-12">
+                <p class="wow fadeInUp">
+                  Donate plz
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <br />
+
+          <div class="hr">
+            <div class="row"></div>
+          </div>
+
+          <br /><br />
+
+          <div class="info">
+            <div class="row">
+              <div class="col-lg-4"><br /><br /></div>
+
+              <div class="col-lg-4 vibe" id="media">
+                <p class="wow fadeInUp" data-wow-delay="0s">ah yes, the self plug</p>
+                <a href="https://www.paypal.com/paypalme/Spoonjs">Paypal</a>
+                <a href="https://discord.com/invite/wAxJtNt">Discord</a>
+                <br /><br />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--------------- footer ends here --------------->
+      <h5 style="text-align: center;">
+        - By Spoon -
+      </h5>
+      <br /><br /><br /><br />
+    </div>
+
+    <!-- greensock cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+      // navigation starts here
+
+      $("#toggle").click(function() {
+        $(this).toggleClass("on");
+        $("#resize").toggleClass("active");
+      });
+
+      $("#resize ul li a").click(function() {
+        $(this).toggleClass("on");
+        $("#resize").toggleClass("active");
+      });
+
+      $(".close-btn").click(function() {
+        $(this).toggleClass("on");
+        $("#resize").toggleClass("active");
+      });
+
+      // navigation ends here
+
+      // nav animation
+
+      TweenMax.from("#brand", 1, {
+        delay: 0.4,
+        y: 10,
+        opacity: 0,
+        ease: Expo.easeInOut
+      });
+
+      TweenMax.staggerFrom(
+        "#menu li a",
+        1,
+        {
+          delay: 0.4,
+          opacity: 0,
+          ease: Expo.easeInOut
+        },
+        0.1
+      );
+
+      // nav animation ends
+
+      new WOW().init();
+    </script>
+  </body>
+</html>
